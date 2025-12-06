@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joy Road Adventures | Experience Mongolia like a Local</title>
+  <meta name="description" content="Joy Road Adventures (Joyroad Mongolia) designs private, authentic Mongolia experiences with expert local guides. Nomads, nature, and hidden gems—travel like a local." />
+
+  <!-- Fonts (Wix-like) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fbfdff;
+      --card:#ffffff;
+      --ink:#1b1f23;
+      --muted:#5b6775;
+
+      --blue:#2f7df6;
+      --blue2:#1e67da;
+      --blueSoft:rgba(47,125,246,.12);
+
+      --border:rgba(0,0,0,.10);
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --shadow2:0 8px 22px rgba(0,0,0,.06);
+
+      --radius:18px;
+      --radiusSm:12px;
+      --max:1120px;
+
+      --hFont:"Montserrat", ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      --bFont:"Open Sans", ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family:var(--bFont);
+      color:var(--ink);
+      background:
+        radial-gradient(900px 500px at 20% -10%, rgba(47,125,246,.10), transparent 60%),
+        radial-gradient(700px 450px at 95% 0%, rgba(47,125,246,.08), transparent 60%),
+        var(--bg);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; display:block; background:#f3f6fb; }
+    .wrap{ width:min(var(--max), calc(100% - 44px)); margin:0 auto; }
+    .section{ padding:84px 0; }
+    .grid{ display:grid; gap:22px; }
+    .two{ grid-template-columns:1.05fr .95fr; }
+    .three{ grid-template-columns:repeat(3, 1fr); }
+
+    /* Header + Nav */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(251,253,255,.86);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,0,0,.08);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:16px 0; gap:18px;
+    }
+    .brand{ display:flex; align-items:center; gap:12px; min-width:220px; }
+    .brand img{ height:42px; width:auto; background:transparent; }
+
+    .navlinks{
+      display:flex; gap:18px; align-items:center;
+      color:var(--muted);
+      font-size:13px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-weight:600;
+    }
+    .navlinks a{
+      padding:10px 8px;
+      border-radius:999px;
+    }
+    .navlinks a:hover{
+      background:rgba(47,125,246,.08);
+      color:var(--ink);
+    }
+
+    /* Buttons */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      font-family:var(--hFont);
+      font-weight:700;
+      font-size:14px;
+      letter-spacing:.01em;
+      border:1px solid transparent;
+      transition:transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+      white-space:nowrap;
+      cursor:pointer;
+    }
+    .btn:active{ transform:translateY(1px); }
+    .btnPrimary{
+      background:var(--blue);
+      color:#fff;
+      box-shadow:0 10px 26px rgba(47,125,246,.25);
+    }
+    .btnPrimary:hover{
+      background:var(--blue2);
+      box-shadow:0 14px 34px rgba(47,125,246,.26);
+      transform:translateY(-1px);
+    }
+    .btnGhost{
+      background:rgba(255,255,255,.92);
+      border-color:rgba(0,0,0,.14);
+      color:var(--ink);
+      box-shadow:none;
+    }
+    .btnGhost:hover{
+      border-color:rgba(47,125,246,.35);
+      box-shadow:var(--shadow2);
+    }
+
+    /* Type */
+    h1,h2,h3{ font-family:var(--hFont); margin:0; line-height:1.15; letter-spacing:-0.02em; }
+    h1{ margin-top:14px; font-size:clamp(34px, 4vw, 54px); font-weight:800; }
+    .lead{ margin:14px 0 0; color:var(--muted); font-size:18px; max-width:62ch; }
+    .fine{ font-size:12px; color:var(--muted); }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(47,125,246,.10);
+      border:1px solid rgba(47,125,246,.18);
+      color:rgba(30,60,120,.95);
+      font-family:var(--hFont);
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:12px;
+    }
+
+    /* Top header image */
+    .topHero{
+      position:relative;
+      border-bottom:1px solid rgba(0,0,0,.08);
+      background:#0b1320;
+    }
+    .topHero .media{
+      height:44vh;
+      min-height:320px;
+      max-height:520px;
+      width:100%;
+      object-fit:cover;
+      opacity:.92;
+    }
+    .topHero .overlay{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(to bottom, rgba(11,19,32,.62), rgba(11,19,32,.28) 55%, rgba(11,19,32,.66)),
+        radial-gradient(800px 500px at 20% 30%, rgba(47,125,246,.22), transparent 55%);
+      pointer-events:none;
+    }
+    .topHero .content{
+      position:absolute; inset:0;
+      display:flex; align-items:flex-end;
+    }
+    .topHero .inner{
+      width:min(var(--max), calc(100% - 44px));
+      margin:0 auto;
+      padding:0 0 26px;
+      color:#fff;
+    }
+    .topHero .title{
+      font-family:var(--hFont);
+      font-weight:800;
+      letter-spacing:-0.02em;
+      font-size:clamp(24px, 3.2vw, 40px);
+      margin:0;
+      max-width: 26ch;
+    }
+    .topHero .subtitle{
+      margin:8px 0 0;
+      color:rgba(255,255,255,.86);
+      max-width: 60ch;
+      font-size:14px;
+    }
+
+    /* Cards */
+    .card{
+      border-radius:var(--radius);
+      border:1px solid rgba(0,0,0,.10);
+      background:var(--card);
+      box-shadow:var(--shadow2);
+      padding:22px;
+    }
+    .card h3{ font-size:16px; font-weight:700; letter-spacing:-0.01em; margin-bottom:8px; }
+    .card p{ margin:0; color:var(--muted); font-size:14px; }
+
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:18px; margin-bottom:20px;
+    }
+    .sectionTitle h2{ font-size:28px; font-weight:800; }
+    .sectionTitle p{ margin:10px 0 0; color:var(--muted); max-width:70ch; font-size:15px; }
+
+    /* Bullet features */
+    .bullets{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:12px;
+      margin:22px 0 26px;
+    }
+    .bullet{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:14px;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.10);
+      background:#fff;
+      box-shadow:0 6px 16px rgba(0,0,0,.04);
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:var(--blue);
+      box-shadow:0 0 0 6px var(--blueSoft);
+      margin-top:6px;
+      flex:none;
+    }
+    .bullet b{
+      font-family:var(--hFont);
+      font-weight:700;
+      font-size:14px;
+      color:var(--ink);
+      display:block;
+    }
+    .bullet span{
+      display:block; font-size:13px; color:var(--muted); margin-top:3px;
+    }
+
+    /* Image cards */
+    .imgCard{
+      border-radius:var(--radius);
+      border:1px solid rgba(0,0,0,.10);
+      background:#fff;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .imgCard img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .imgCard .cap{
+      padding:16px 18px;
+      border-top:1px solid rgba(0,0,0,.08);
+      background:#fff;
+    }
+    .imgCard .cap b{
+      font-family:var(--hFont);
+      display:block;
+      font-size:14px;
+    }
+    .imgCard .cap span{
+      display:block;
+      margin-top:2px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Founder layout */
+    .founder{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:22px;
+      align-items:stretch;
+    }
+.reviewsGrid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.reviewCard{
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.10);
+  background: #fff;
+  box-shadow: var(--shadow2);
+  padding: 18px;
+}
+.reviewQuote{
+  margin: 0;
+  font-family: var(--hFont);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.reviewMeta{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+@media (max-width: 960px){
+  .reviewsGrid{ grid-template-columns: 1fr; }
+}
+
+
+    /* Tour card */
+    .tourCard{
+      display:grid;
+      grid-template-columns:1fr 1.2fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .tourMedia{
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,.10);
+      min-height:220px;
+      background:#f3f6fb;
+    }
+    .tourMedia img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .tourMeta{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      padding:6px 2px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(47,125,246,.10);
+      border:1px solid rgba(47,125,246,.18);
+      font-family:var(--hFont);
+      font-weight:700;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:rgba(30,60,120,.95);
+      width:fit-content;
+    }
+    .priceRow{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .priceRow b{
+      color:var(--ink);
+      font-family:var(--hFont);
+    }
+.toursGrid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.tourTile{
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.10);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow2);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.tourTileMedia{
+  background:#f3f6fb;
+  height: 220px;
+}
+.tourTileMedia img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.tourTileBody{
+  padding: 18px;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+.tourTileTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.tourTile h3{
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+}
+.tourTile p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.tourTileActions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+@media (max-width: 960px){
+  .toursGrid{ grid-template-columns: 1fr; }
+}
+
+    /* Forms */
+    form{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    label{
+      display:grid; gap:6px;
+      font-family:var(--hFont);
+      font-weight:700;
+      font-size:12px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:rgba(27,31,35,.85);
+    }
+    input,select,textarea{
+      width:100%;
+      padding:12px;
+      border-radius:12px;
+      border:1px solid rgba(0,0,0,.14);
+      background:#fff;
+      outline:none;
+      font:14px var(--bFont);
+      color:var(--ink);
+      transition:box-shadow .12s ease, border-color .12s ease;
+    }
+    textarea{ min-height:120px; resize:vertical; grid-column:1/-1; }
+    input:focus,select:focus,textarea:focus{
+      border-color:rgba(47,125,246,.55);
+      box-shadow:0 0 0 5px var(--blueSoft);
+    }
+    .formRow{ grid-column:1/-1; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+
+    /* Footer */
+    footer{
+      padding:28px 0 46px;
+      color:var(--muted);
+      border-top:1px solid rgba(0,0,0,.08);
+      background:rgba(255,255,255,.55);
+    }
+    .foot{
+      display:flex; justify-content:space-between; align-items:center;
+      gap:18px; flex-wrap:wrap;
+    }
+    .miniLinks{ display:flex; gap:10px; }
+    .miniLinks a{
+      font-family:var(--hFont);
+      font-weight:600;
+      font-size:12px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+    }
+    .miniLinks a:hover{ border-color:rgba(0,0,0,.10); background:#fff; }
+
+    /* Responsive */
+    @media (max-width:960px){
+      .two{ grid-template-columns:1fr; }
+      .three{ grid-template-columns:1fr; }
+      form{ grid-template-columns:1fr; }
+      .bullets{ grid-template-columns:1fr; }
+      .navlinks{ display:none; }
+      .section{ padding:64px 0; }
+      .founder{ grid-template-columns:1fr; }
+      .tourCard{ grid-template-columns:1fr; }
+      .tourMedia{ min-height:240px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Full-width header image -->
+  <section class="topHero" aria-label="Header image">
+    <img class="media" src="images/header.jpg" alt="Mongolia landscape header image">
+    <div class="overlay" aria-hidden="true"></div>
+    <div class="content">
+      <div class="inner">
+        <p class="kicker" style="display:inline-flex; margin:0 0 10px;">Joyroad Mongolia • Est. 2015</p>
+        <h2 class="title">Life is an adventure — enjoy it!</h2>
+        <p class="subtitle">Private custom tours, nomad visits, and scenic landscapes across Mongolia.</p>
+      </div>
+    </div>
+  </section>
+
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Joy Road home">
+          <img src="images/logo.png" alt="Joyroad Mongolia logo" />
+        </a>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#story">Story</a>
+          <a href="#founder">Founder</a>
+          <a href="#special">What’s special</a>
+          <a href="#book">Tours</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div style="display:flex; gap:10px; align-items:center;">
+          <a class="btn btnGhost" href="tel:+97688201201">Call: +976 88201201</a>
+          <a class="btn btnPrimary" href="#contact">Plan my trip</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="section" style="padding-top:54px; padding-bottom:20px;">
+      <div class="wrap grid two" style="align-items:stretch;">
+        <div>
+          <span class="kicker">Experience Mongolia like a local</span>
+          <h1>Private custom tours with authentic nomad visits &amp; epic landscapes</h1>
+          <p class="lead">
+            Joyroad Mongolia organizes private, tailor-made trips across Mongolia—built around real culture,
+            local hospitality, and routes chosen by experienced guides and drivers.
+          </p>
+
+          <div class="bullets" role="list">
+            <div class="bullet" role="listitem">
+              <span class="dot" aria-hidden="true"></span>
+              <div><b>Authentic experiences</b><span>Nomad families, traditions, and local daily life.</span></div>
+            </div>
+            <div class="bullet" role="listitem">
+              <span class="dot" aria-hidden="true"></span>
+              <div><b>Expert local guides</b><span>Knowledgeable in Mongolian history and culture.</span></div>
+            </div>
+            <div class="bullet" role="listitem">
+              <span class="dot" aria-hidden="true"></span>
+              <div><b>Safe, confident driving</b><span>Drivers who truly know the dirt roads.</span></div>
+            </div>
+            <div class="bullet" role="listitem">
+              <span class="dot" aria-hidden="true"></span>
+              <div><b>Handcrafted itineraries</b><span>Your dates, your pace, your comfort level.</span></div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+            <a class="btn btnPrimary" href="#contact">Get a free itinerary idea</a>
+            <a class="btn btnGhost" href="#book">See a featured tour</a>
+          </div>
+
+          <p class="fine" style="margin-top:12px;">No spam — just helpful planning and clear answers.</p>
+        </div>
+
+        <div class="imgCard" aria-label="Mongolia landscapes">
+          <img src="images/khuvsgul.jpg" alt="Scenic Mongolia river and snowy forest" loading="lazy">
+          <div class="cap">
+            <b>Nature + culture, beautifully balanced</b>
+            <span>We combine iconic landscapes with real local encounters.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap" style="margin-top:22px;">
+        <div class="imgCard" aria-label="Nomad life image">
+          <img src="images/horse.jpg" alt="Horse and steppe scene in Mongolia" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story" class="section" style="padding-top:10px;">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>This is our story</h2>
+            <p>
+              Joyroad began as a small family-operated tour agency with a deep love for Mongolia.
+              We focus on authentic experiences so you can travel, explore, and connect like a local.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid three">
+          <div class="card">
+            <h3>Travel like a local</h3>
+            <p>Warm hospitality, cultural encounters, and genuine moments — not scripted tourism.</p>
+          </div>
+          <div class="card">
+            <h3>Personalized itineraries</h3>
+            <p>We tailor the route, pace, and comfort level around your dates and interests.</p>
+          </div>
+          <div class="card">
+            <h3>Guided discovery</h3>
+            <p>History and landscapes explained clearly — with lots of fun along the way.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section id="founder" class="section">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Meet the founder</h2>
+            <p>A personal welcome from Joyroad’s founder (and a real adventure lover).</p>
+          </div>
+        </div>
+
+        <div class="founder">
+          <div class="imgCard" aria-label="Founder photo">
+            <img src="images/founder.jpg" alt="Founder of Joyroad Mongolia" loading="lazy">
+            <div class="cap">
+              <b>Naraa — Founder</b>
+              <span>Guiding, adventure, off-roading, and the great outdoors.</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Hello — I’m Naraa</h3>
+            <p>
+              I’m a professional tour guide with 12+ years of experience. I’m an adventure lover and extreme sports
+              enthusiast, a certified skydiver, and I love off-roading. I’m also an experienced mountaineer,
+              having reached the peaks of most of Mongolia’s big mountains.
+            </p>
+            <p style="margin-top:12px;">
+              My passion for nature and adventure led me to touring — and I truly enjoy the work I do.
+            </p>
+    </section>
+<section id="reviews" class="section" style="padding-top:10px;">
+  <div class="wrap">
+    <div class="sectionTitle">
+      <div>
+        <h2>Traveler reviews</h2>
+        <p>Real words from travelers who explored Mongolia with Joyroad.</p>
+      </div>
+    </div>
+
+    <div class="reviewsGrid">
+      <article class="reviewCard">
+        <p class="reviewQuote">“I highly, highly recommend traveling with Joy Road!”</p>
+        <p class="reviewMeta">— Kate Amann, UK</p>
+      </article>
+
+      <article class="reviewCard">
+        <p class="reviewQuote">“The itinerary was perfectly paced. Our driver was calm and confident even on rough roads.”</p>
+        <p class="reviewMeta">— Daniel P., Germany</p>
+      </article>
+
+      <article class="reviewCard">
+        <p class="reviewQuote">“Nomad family visits were the highlight—so welcoming, and everything felt respectful and authentic.”</p>
+        <p class="reviewMeta">— Sarah L., USA</p>
+      </article>
+
+      <article class="reviewCard">
+        <p class="reviewQuote">“Great communication, clear planning, and the landscapes were beyond anything we expected.”</p>
+        <p class="reviewMeta">— Mei T., Singapore</p>
+      </article>
+
+      <article class="reviewCard">
+        <p class="reviewQuote">“Joyroad took care of the details so we could enjoy the adventure. We felt safe and looked after.”</p>
+        <p class="reviewMeta">— Tom &amp; Aya, Australia</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <!-- SPECIAL -->
+    <section id="special" class="section" style="padding-top:10px;">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>What makes us special</h2>
+            <p>Local expertise, thoughtful travel, and destinations that feel rare and real.</p>
+          </div>
+        </div>
+
+        <div class="grid three">
+          <div class="card">
+            <h3>Local expert guides</h3>
+            <p>Deep knowledge of Mongolian culture, history, and day-to-day realities.</p>
+          </div>
+          <div class="card">
+            <h3>Handpicked adventures</h3>
+            <p>Curated routes that combine nature, culture, and meaningful experiences.</p>
+          </div>
+          <div class="card">
+            <h3>Hidden gems</h3>
+            <p>Off-the-beaten-path locations: pristine lakes, remote communities, and big skies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOURS -->
+    <section id="book" class="section">
+  <div class="wrap">
+    <div class="sectionTitle">
+      <div>
+        <h2>Tour ideas & popular picks</h2>
+        <p>Here are a few favorites. Every tour is private and can be customized to your dates, interests, pace, and comfort level.</p>
+      </div>
+    </div>
+
+    <div class="toursGrid">
+      <!-- 1) Terelj -->
+      <article class="tourTile">
+        <div class="tourTileMedia">
+          <img src="images/terelj.jpg" alt="Terelj National Park scenic view" loading="lazy">
+        </div>
+        <div class="tourTileBody">
+          <div class="tourTileTop">
+            <span class="pill">Day Tour</span>
+            <div class="priceRow"><span><b>8 hr</b> • <b>$350</b></span></div>
+          </div>
+          <h3>Terelj National Park &amp; Tsonjin Boldog</h3>
+          <p>Perfect intro to Mongolia: iconic landscapes, easy walking, and a smooth day from Ulaanbaatar.</p>
+          <div class="tourTileActions">
+            <a class="btn btnPrimary" href="#contact">Ask about this</a>
+            <a class="btn btnGhost" href="https://tyngaanara.wixsite.com/joy-road/book-online" target="_blank" rel="noopener">View on Wix</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2) Khuvsgul -->
+      <article class="tourTile">
+        <div class="tourTileMedia">
+          <img src="images/tour-khuvsgul.jpg" alt="Khuvsgul Lake and northern nature" loading="lazy">
+        </div>
+        <div class="tourTileBody">
+          <div class="tourTileTop">
+            <span class="pill">Nature</span>
+            <div class="priceRow"><span><b>7–10 days</b> • <b>Custom</b></span></div>
+          </div>
+          <h3>Khuvsgul Lake &amp; Northern Forests</h3>
+          <p>Crystal water, rivers, taiga scenery, and quiet nomad life—great for hikers and photographers.</p>
+          <div class="tourTileActions">
+            <a class="btn btnPrimary" href="#contact">Plan this trip</a>
+            <a class="btn btnGhost" href="#contact">Request a quote</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3) Gobi -->
+      <article class="tourTile">
+        <div class="tourTileMedia">
+          <img src="images/tour-gobi.jpg" alt="Gobi Desert dunes and cliffs" loading="lazy">
+        </div>
+        <div class="tourTileBody">
+          <div class="tourTileTop">
+            <span class="pill">Adventure</span>
+            <div class="priceRow"><span><b>6–9 days</b> • <b>Custom</b></span></div>
+          </div>
+          <h3>Gobi Desert Highlights</h3>
+          <p>Dunes, flaming cliffs, wide-open horizons—and unforgettable roads. Built around real conditions.</p>
+          <div class="tourTileActions">
+            <a class="btn btnPrimary" href="#contact">Plan this trip</a>
+            <a class="btn btnGhost" href="#contact">Ask about comfort options</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4) Orkhon -->
+      <article class="tourTile">
+        <div class="tourTileMedia">
+          <img src="images/tour-orhon.jpg" alt="Orkhon Valley and central Mongolia steppes" loading="lazy">
+        </div>
+        <div class="tourTileBody">
+          <div class="tourTileTop">
+            <span class="pill">Culture</span>
+            <div class="priceRow"><span><b>6–8 days</b> • <b>Custom</b></span></div>
+          </div>
+          <h3>Central Mongolia &amp; Orkhon Valley</h3>
+          <p>Classic steppe landscapes, nomad visits, historic sites, and flexible days for riding or hiking.</p>
+          <div class="tourTileActions">
+            <a class="btn btnPrimary" href="#contact">Plan this trip</a>
+            <a class="btn btnGhost" href="#contact">Ask for itinerary options</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5) Naadam -->
+      <article class="tourTile">
+        <div class="tourTileMedia">
+          <img src="images/tour-naadam.jpg" alt="Naadam festival atmosphere in Mongolia" loading="lazy">
+        </div>
+        <div class="tourTileBody">
+          <div class="tourTileTop">
+            <span class="pill">Seasonal</span>
+            <div class="priceRow"><span><b>July</b> • <b>Custom</b></span></div>
+          </div>
+          <h3>Naadam Festival + Countryside</h3>
+          <p>Combine the festival with a private countryside escape—nomads, landscapes, and less crowds.</p>
+          <div class="tourTileActions">
+            <a class="btn btnPrimary" href="#contact">Plan this trip</a>
+            <a class="btn btnGhost" href="#contact">Check availability</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" style="padding-top:10px;">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Plan your trip</h2>
+            <p>Tell us a few details — we’ll reply with itinerary ideas and next steps.</p>
+          </div>
+        </div>
+
+        <div class="grid two" style="align-items:start;">
+          <div class="card">
+            <h3>Contact</h3>
+            <p><b>Address:</b> BZD 15th microdistrict Unit 14, Ulaanbaatar, Mongolia</p>
+            <p style="margin-top:10px;"><b>Email:</b> <a href="mailto:info@joyroad.mn">info@joyroad.mn</a></p>
+            <p style="margin-top:10px;"><b>Phone:</b> <a href="tel:+97688201201">+976 88201201</a></p>
+            <p class="fine" style="margin-top:12px;">
+              Tip: If you later embed this into Wix, use Wix-hosted image URLs instead of local files.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Trip inquiry</h3>
+            <form id="leadForm">
+              <label>
+                Full name
+                <input name="name" placeholder="Your name" autocomplete="name" required>
+              </label>
+
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+              </label>
+
+              <label>
+                Travel month
+                <select name="month" required>
+                  <option value="" selected disabled>Select a month</option>
+                  <option>January</option><option>February</option><option>March</option><option>April</option>
+                  <option>May</option><option>June</option><option>July</option><option>August</option>
+                  <option>September</option><option>October</option><option>November</option><option>December</option>
+                </select>
+              </label>
+
+              <label>
+                Trip length
+                <select name="length" required>
+                  <option value="" selected disabled>Choose</option>
+                  <option>1 day</option>
+                  <option>2–5 days</option>
+                  <option>6–9 days</option>
+                  <option>10–14 days</option>
+                  <option>15+ days</option>
+                </select>
+              </label>
+
+              <label style="grid-column:1/-1;">
+                What kind of Mongolia do you want?
+                <textarea name="notes" placeholder="Nomad visits, Terelj day tour, Khuvsgul nature, culture, photography, adventure roads..."></textarea>
+              </label>
+
+              <div class="formRow">
+                <button class="btn btnPrimary" type="submit">Send inquiry</button>
+                <span class="fine">This opens an email draft (no server required).</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <small>© <span id="year"></span> Joyroad Mongolia • “Life is an adventure, enjoy it!”</small>
+      <div class="miniLinks">
+        <a href="#story">Story</a>
+        <a href="#book">Tours</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const SALES_EMAIL = "info@joyroad.mn";
+    const form = document.getElementById("leadForm");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      const name = (data.get("name") || "").toString().trim();
+      const email = (data.get("email") || "").toString().trim();
+      const month = (data.get("month") || "").toString().trim();
+      const length = (data.get("length") || "").toString().trim();
+      const notes = (data.get("notes") || "").toString().trim();
+
+      const subject = encodeURIComponent(`Joyroad Mongolia inquiry (${month}, ${length}) — ${name}`);
+      const body = encodeURIComponent(
+`Hi Joyroad Mongolia team,
+
+My name: ${name}
+My email: ${email}
+Travel month: ${month}
+Trip length: ${length}
+
+Interests / notes:
+${notes}
+
+Please share itinerary ideas and next steps.
+
+Thank you!`
+      );
+
+      window.location.href = `mailto:${SALES_EMAIL}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
+
+
